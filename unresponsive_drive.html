@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html> 
+  <head> 
+    <title>Nombre Pagina Web</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,300;1,400&amp;display=swap">
+    <script src="https://kit.fontawesome.com/036c39265d.js" crossorigin="anonymous"> </script>
+    <link rel="stylesheet" href="css/articles.css">
+    <script src="js/main.js"> </script>
+  </head>
+  <body>
+    <main class="wrapper"> 
+      <nav class="content-navigation"><span class="icon-close" id="close-btn">X</span><a href="unresponsive_drive.html" target="_blank">Unresponsive Drive</a><a href="unreadable_sectors.html" target="_blank">Unreadable Sector(s) Detected Data Loss Occurred </a><a href="drive_media_errors.html" target="_blank">Drive Reports Media Errors</a><a href="drive_by_passed.html" target="_blank">By-Passed drive</a><a href="impending_drive_failure.html" target="_blank">Impending Drive failure</a><a href="check_conditions.html" target="_blank">Check Conditions</a><a href="isolation_of_drive.html" target="_blank">Isolation Of Drive Causing Redundancy Mismatch</a><a href="degraded_drawer.html" target="_blank">A drawer in the tray has become Degraded</a><a href="degraded_sas_port.html" target="_blank">E-Series tray/drawer loss of redundancy</a><a href="nominal_temperature_exceeded.html" target="_blank">Degraded SAS port</a><a href="degraded_sas_port.html" target="_blank">Nominal/Maximun Temperature Exceeded</a><a href="power_supply_failure.html" target="_blank">Power Supply Failed</a><a href="fibre_channel_link_errors.html" target="_blank">Fibre channel link errors</a><a href="write_back_cache.html" target="_blank">Write-Back Caching Forcibly Disabled</a><a href="amber_light_with_no_aparent_reason.html" target="_blank">Amber light with no Apparent Reason</a><a href="no_access_to_santricity_web.html" target="_blank">No Access to SANtricity Web UI</a><a href="resetting_admin_password.html" target="_blank">Reset SANtricity Password</a><a href="autosupport_issues.html" target="_blank">An ASUP message could not be Delivered from the Array Management</a><a href="volume_failure.html" target="_blank">Volume Failure</a><a href="persistent_cache_backup_end_of_life.html" target="_blank">Persistent Cache Backup Device At End Of Life</a><a href="cache_backup_failed.html" target="_blank">Cache Backup Failed</a><a href="lb_host_redundancy_lost.html" target="_blank">ALB_Host_Redundancy_Lost</a></nav>
+      <section class="articles-content">
+              <nav><a href="index.html">Home &gt;</a><a href="software.html">Software &gt;</a><a href="unresponsive_drive.html">Unresponsive drive</a></nav>
+        <header> 
+          <h1 id="unresponsive_drive">Unresponsive Drive</h1>
+        </header>
+        <article> 
+          <p>Sometimes disks become unresponsive due to a bad replacement procedure or the storage array cannot detect it. Unresponsive drives are automatically power-cycled to see whether the fault condition can be cleared. If the condition cannot be cleared, the drive is flagged as failed.</p>
+          <ul class="articles-content-bullet"> 
+            <li>Check MEL for any event against the related drive.</li>
+            <li>If nothing is found, then check for any FW that deals with unresponsive status.</li>
+            <li>Reseat</li>
+            <li>Replace Drive</li>
+          </ul>
+                <div class="articles-notes">
+                  <p><strong>Note :</strong>This drive cannot be manually failed since the controllers are not able to communicate with the drive. All what need to do is to remove the drive and replace it.
+                  </p>
+                </div>
+                <div class="articles-notes">
+                  <p><strong>Note :</strong>Wait at least two minutes between removing the prolematic drive and inserting the replacement drive in order to allow the array to detect the change.
+                  </p>
+                </div>
+        </article>
+      </section>
+            <section class="articles-navigation"> 
+              <div class="articles-navigation-container"> 
+                <p>In this article you will find: 
+                  <blockquote> <a href="unresponsive_drive.html">Unresponsive Drive</a></blockquote>
+                </p>
+              </div><span id="show-btn"><i class="fas fa-bars"></i></span>
+            </section>
+    </main>
+  </body>
+</html>

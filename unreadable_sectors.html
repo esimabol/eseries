@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html> 
+  <head> 
+    <title>Nombre Pagina Web</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,300;1,400&amp;display=swap">
+    <script src="https://kit.fontawesome.com/036c39265d.js" crossorigin="anonymous"> </script>
+    <link rel="stylesheet" href="css/articles.css">
+    <script src="js/main.js"> </script>
+  </head>
+  <body>
+    <main class="wrapper"> 
+      <nav class="content-navigation"><span class="icon-close" id="close-btn">X</span><a href="unresponsive_drive.html" target="_blank">Unresponsive Drive</a><a href="unreadable_sectors.html" target="_blank">Unreadable Sector(s) Detected Data Loss Occurred </a><a href="drive_media_errors.html" target="_blank">Drive Reports Media Errors</a><a href="drive_by_passed.html" target="_blank">By-Passed drive</a><a href="impending_drive_failure.html" target="_blank">Impending Drive failure</a><a href="check_conditions.html" target="_blank">Check Conditions</a><a href="isolation_of_drive.html" target="_blank">Isolation Of Drive Causing Redundancy Mismatch</a><a href="degraded_drawer.html" target="_blank">A drawer in the tray has become Degraded</a><a href="degraded_sas_port.html" target="_blank">E-Series tray/drawer loss of redundancy</a><a href="nominal_temperature_exceeded.html" target="_blank">Degraded SAS port</a><a href="degraded_sas_port.html" target="_blank">Nominal/Maximun Temperature Exceeded</a><a href="power_supply_failure.html" target="_blank">Power Supply Failed</a><a href="fibre_channel_link_errors.html" target="_blank">Fibre channel link errors</a><a href="write_back_cache.html" target="_blank">Write-Back Caching Forcibly Disabled</a><a href="amber_light_with_no_aparent_reason.html" target="_blank">Amber light with no Apparent Reason</a><a href="no_access_to_santricity_web.html" target="_blank">No Access to SANtricity Web UI</a><a href="resetting_admin_password.html" target="_blank">Reset SANtricity Password</a><a href="autosupport_issues.html" target="_blank">An ASUP message could not be Delivered from the Array Management</a><a href="volume_failure.html" target="_blank">Volume Failure</a><a href="persistent_cache_backup_end_of_life.html" target="_blank">Persistent Cache Backup Device At End Of Life</a><a href="cache_backup_failed.html" target="_blank">Cache Backup Failed</a><a href="lb_host_redundancy_lost.html" target="_blank">ALB_Host_Redundancy_Lost</a></nav>
+      <section class="articles-content">
+              <nav><a href="index.html">Home &gt;</a><a href="software.html">Software &gt;</a><a href="Unreadable Sector(s) Detected Data Loss Occurred.html">Unreadable Sector(s) Detected Data Loss Occurred</a></nav>
+        <header> 
+          <h1 id="unresponsive_drive">Unreadable Sector(s) Detected Data Loss Occurred</h1>
+        </header>
+        <article> 
+          <p>Unreadable sector means is that there are sectors on the drive(s) in the RAID 5 that have both the data and parity unreadable. Therefore, its logging unreadable sectors and data loss. the Physical Unreadable sector means that the sector is physically bad on the drive. The logical means that was reconstructed but the data or parity was not available to complete the stripe.</p>
+          <ul class="articles-content-bullet"> 
+            <li>Unreadable sectors are DA errors and will need the trace buffers to analyze.</li>
+            <li>Check ASUP under Unreadable sectors section.</li>
+            <li>If failure type is physical, go ahead and send replacement</li>
+            <li>Check RAID level for disk failures and data loss</li>
+            <li>Next steps will be to replace the drive and clear the unreadable sectors table from SANtricity GUI. Then recommend a scandisk from the host side.                              </li>
+          </ul>
+        </article>
+      </section>
+            <section class="articles-navigation"> 
+              <div class="articles-navigation-container"> 
+                <p>In this article you will find: 
+                  <blockquote> <a href="unreadale_sectors.html">Unreadable Sectors</a></blockquote>
+                </p>
+              </div><span id="show-btn"><i class="fas fa-bars"></i></span>
+            </section>
+    </main>
+  </body>
+</html>

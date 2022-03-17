@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>No Access to SANtricity Web UI</title>
+</head>
+<body>
+	<h1>No Access to SANtricity Web UI</h1>
+	
+	<p>You may need to restart the web services. You can do this from:</p>
+
+	<h2>Linux Host</h2>
+	<p>Run <em>curl -k -X POST -u USERNAME:PASSWORD https://controller_Management_Address/devmgr/v2/restart</em></p>
+
+	<h2>Windows Host</h2>
+	<p>From the power shell run <em>$Header = @{"Authorization" = "Basic "+[System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes("USERNAME:PASSWORD "))}
+Invoke-RestMethod -Method POST -Headers $Header -ContentType "application/json" -SkipCertificateCheck -Uri "https://controller_ip/devmgr/v2/restart"
+</em></p>
+
+	<h2>Controller Shell</h2>
+	<ul>
+		<li>SSH to the controller shell using the "diag" user</li>
+		<li>The diag user password depends on the controller firmware level</li>
+		<li>11.30.x: eos/wy3oo&w4 (for eos shell) and diag/wy3oo&w4 (for dom0/linux shell)</li>
+		<li>11.40.x: eos/UI_admin_password> (for eos shell) and diag/UI_admin password(for dom0/linux shell)</li>
+		<li>Run the command <em>sudo systemctl restart msw</em></li>
+	</ul>
+	
+	<p><strong>Note:</strong> Keep in mind that after restarting the web services, SANtricity System Manager web interface will take approx. 5-10 minutes to become available again. </p>
+	<h2>Additional Information</h2>
+	<a href="https://mysupport.netapp.com/NOW/public/eseries/sam/index.html#page/GUID-8538272A-B802-49D9-9EA2-96C82DAD26A2/GUID-71D62476-4E05-4578-A594-8BC2330FD60C.html">Enabling Remote Access</a>
+
+</body>
+</html>
+
+

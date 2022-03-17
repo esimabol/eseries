@@ -1,0 +1,34 @@
+-var titulo ="Nombre Pagina Web"
+-var notas ="Note :"
+-var articulos = ["Unresponsive Drive", "Unreadable Sector(s) Detected Data Loss Occurred", "Drive Reports Media Errors","By-Passed drive","Impending Drive failure","Check Conditions","Isolation Of Drive Causing Redundancy Mismatch", "A drawer in the tray has become Degraded","E-Series tray/drawer loss of redundancy", "Degraded SAS port", "Nominal/Maximun Temperature Exceeded","Power Supply Failed","Fibre channel link errors", "Write-Back Caching Forcibly Disabled", "Amber light with no Apparent Reason", "No Access to SANtricity Web UI", "Reset SANtricity Password", "An ASUP message could not be Delivered from the Array Management","Volume Failure", "Persistent Cache Backup Device At End Of Life", "Cache Backup Failed", "ALB_Host_Redundancy_Lost"]
+
+mixin topnav(ref, articulo)
+    nav
+        a(href="index.html") Home &gt;
+        a(href="software.html") Software &gt;
+        a(href= ref+'.html')= articulo  
+
+mixin notes(note)
+    .articles-notes
+        p
+            strong #{notas}
+            = note
+
+mixin aside(href,name)
+    section.articles-navigation 
+        .articles-navigation-container 
+            p In this article you will find: 
+                blockquote 
+                    a(href=href+'.html')= name
+        span#show-btn: i.fas.fa-bars
+
+ 
+
+//- .articles-notes 
+//-                 p #[strong Notes: ]
+//-                     | Wait at least two minutes between 
+//-                     | removing the problematic drive and 
+//-                     | inserting the replacement in order to 
+//-                     | allow the array to detect the change.
+
+    

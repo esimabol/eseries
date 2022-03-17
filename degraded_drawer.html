@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>A drawer in the Tray Has Become Degraded</title>
+</head>
+<body>
+	<h1>A drawer in the Tray Has Become Degraded</h1>
+	<ul>
+		<li>Check the reason for degraded: Disk failures, SAS connections, loss of redundancy etc.</li>
+		<li>Go to the Hardware section and check both front and back for any failure or warnings</li>
+		<li>Check State Capture Data > sasStateCapture > sasShowAllExpanders > Error Statistics for Expander Phys:</li>
+	</ul>
+
+	<p>You may get something similar if an issue:</p>
+
+	<img src="img/a_drawer_in_the_tray_has_become_degraded/img1.jpg">
+	<p>Now, based on above details check Channel 3 Level 2 0x12 Hex to get the exact location.</p>
+
+	<img src="img/a_drawer_in_the_tray_has_become_degraded/img2.jpg">
+	<img src="img/a_drawer_in_the_tray_has_become_degraded/img3.jpg">
+	<p>Which shows B Side</p>
+
+	<h2>Reset SAS Statistics</h2>
+	<ul>
+		<li><em>reset storagearray SASPHYBaseline;</em></li>
+		<li><em>clear allDriveChannels stats;</em></li>
+	</ul>
+
+	<h2>Additional Information</h2>
+	<a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/E-Series_Storage_Array/E-Series_drawer_degraded_or_multiple_disk_errors_on_one_drawer">Degraded Drawer</a>
+	<p><strong>Note:</strong> Drawer replacements can be done either Offline or Online. Check Drawer loss protection status.</p>
+	
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>E-Series tray/drawer loss of redundancy</title>
+</head>
+<body>
+	<h1>E-Series tray/drawer loss of redundancy</h1>
+	<p>Check the recoveryGURU to see which components and trays are reporting the loss of redundancy.</p>
+	<ul>
+		<li>Controller / Controller Tray</li>
+		<li>ESM / IOM (Environmental Services Module / Input Output Module) / Expansion Tray</li>
+		<li>Drive Drawer (60-Bay Enclosure)</li>
+	</ul>
+
+	<p>Investigate any components specified in the recoveryGURU to ensure those components are seated properly and powered on.</p>
+	
+	<p>Controllers and ESMs/IOMs can be unseated and reseated if needed to ensure proper seating and power.</p>
+
+	<p>Investigate the backend cabling to ensure that all cables are securely connected and the ports display link lights.</p>
+	<p>Cables connected to controllers and ESMs/IOMs can be unseated and reseated if needed.</p>
+	<p><strong>Note:</strong> Be sure not to unseat or disconnect cables on the working side. Doing so will result in a complete loss of access to that tray and any tray below it in the chain.</p>
+
+	<p>The difficulty in troubleshooting a loss of redundancy on drive trays ranges from simple to very complex and may require active knowledge of how to read and interpret the State Capture data located within a standard support bundle.</p>
+
+	
+	<h2>Additional Information</h2>
+	<a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/E-Series_Storage_Array/How_to_troubleshoot_E-Series_tray%2F%2Fdrawer_loss_redundancy">How to Troubleshoot E-Series Tray Drawer Loss Redundancy</a>
+	<a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/E-Series_Storage_Array/E-series_all_disk_drivers_are_Loss_of_redundancy_status_in_one_Drawer">E-Series All Drives are Loss of Redundancy Status in on Drawer</a>
+	
+</body>
+</html>

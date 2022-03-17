@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Isolation Of Drive Causing Redundancy Mismatch</title>
+</head>
+<body>
+	<h1>Isolation Of Drive Causing Redundancy Mismatch</h1>
+	<p>If the following are true, a parity scan and repair on the affected volume can be performed:</p>
+	<ul>
+		<li>The volumes have Data Assurance turned on</li>
+		<li>The error is only logged against one drive</li>
+		<li>There are no other drive check conditions</li>
+	</ul>
+
+	<p>Go to MEL and identify byte 33 within the raw data of the error.</p>
+
+	<img src="img/isolation_of_drive/img1.jpg">
+	<p>Identify volume SSID within the Raw data. The byte 33. This value is in HEX and it must be converted into DEC. Use the <a href="">Identificator Tool</a> to get this data.</p>
+
+	<ol>
+		<li>Go to <em>evfShowVol</em> in State-Data-Capture with that value. </li>
+		<li>Make sure the <strong>App tag</strong> field matches the HEX value obtained.</li>
+		<li>Check the <strong>user label</strong> field to identify the volume.</li>
+		<li>Run the following script using the script Editor in SANtricity desktop App: <em>check volume ["VOLUME_NAME"] parity mediaErrorFile="C:\MediaError.txt" parityErrorFile="C:\ParityError..txt" priority=high verbose=true;</em></li>
+	</ol>
+
+	<p><strong>Note:</strong> You can change output location. This command may run up to 3 days. Need to wait until it completes. DO NOT HIT CANCEL IN THE POP UP WINDOW OF THE SCRIPT.</p>
+
+	<p><strong>Note:</strong> This error could spread to more than a single volume.</p>
+	<ol start="5">
+		<li>After completion run <em>repair volume ["1"] parity parityErrorFile="C:\ParityError.txt" verbose=true;</em> script. Request the parity error file after completion. This is usually faster than the checking process, however, there is not exact ETA.</li>
+	</ol>
+
+	<h2>Additional Information</h2>
+	<a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/E-Series_Storage_Array/Isolation_of_drive_causes_redundancy_mismatch">Isolation of Drive Causing Redundancy Mismatch.</a>
+	
+</body>
+</html>

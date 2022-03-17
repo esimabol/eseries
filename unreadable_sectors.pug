@@ -1,0 +1,15 @@
+extends template.pug 
+block contenido_principal
+    section.articles-content
+        +topnav('Unreadable Sector(s) Detected Data Loss Occurred','Unreadable Sector(s) Detected Data Loss Occurred')
+        header 
+            h1#unresponsive_drive #{articulos[1]}
+        article 
+            p Unreadable sector means is that there are sectors on the drive(s) in the RAID 5 that have both the data and parity unreadable. Therefore, its logging unreadable sectors and data loss. the Physical Unreadable sector means that the sector is physically bad on the drive. The logical means that was reconstructed but the data or parity was not available to complete the stripe.
+            ul.articles-content-bullet 
+                li Unreadable sectors are DA errors and will need the trace buffers to analyze.
+                li Check ASUP under Unreadable sectors section.
+                li If failure type is physical, go ahead and send replacement
+                li Check RAID level for disk failures and data loss
+                li Next steps will be to replace the drive and clear the unreadable sectors table from SANtricity GUI. Then recommend a scandisk from the host side.                              
+    +aside('unreadale_sectors', 'Unreadable Sectors')

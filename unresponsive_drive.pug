@@ -1,0 +1,16 @@
+extends template.pug 
+block contenido_principal
+    section.articles-content
+        +topnav('unresponsive_drive','Unresponsive drive')
+        header 
+            h1#unresponsive_drive #{articulos[0]}
+        article 
+            p Sometimes disks become unresponsive due to a bad replacement procedure or the storage array cannot detect it. Unresponsive drives are automatically power-cycled to see whether the fault condition can be cleared. If the condition cannot be cleared, the drive is flagged as failed.
+            ul.articles-content-bullet 
+                li Check MEL for any event against the related drive.
+                li If nothing is found, then check for any FW that deals with unresponsive status.
+                li Reseat
+                li Replace Drive
+            +notes('This drive cannot be manually failed since the controllers are not able to communicate with the drive. All what need to do is to remove the drive and replace it.')
+            +notes('Wait at least two minutes between removing the prolematic drive and inserting the replacement drive in order to allow the array to detect the change.')                   
+    +aside('unresponsive_drive', 'Unresponsive Drive')

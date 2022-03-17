@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Write-Back Caching Forcibly Disabled</title>
+</head>
+<body>
+	<h1>Write-Back Caching Forcibly Disabled</h1>
+	
+	<p>Cache memory is an area of temporary volatile storage (RAM) on the controller that has a faster access time than the drive media. If you use cache memory, you can increase overall I/O performance because of these reasons:</p>
+	<ul>
+		<li>Data requested from the host for a read might already be in the cache from a previous operation, thus eliminating the need for drive access.</li>
+		<li>Write data is written initially to the cache, which frees the application to continue instead of waiting for the data to be written to the drive.</li>
+	</ul>
+	<p>Write-back caching was disabled on one or more volumes. This problem can occur for the following reasons:</p>
+	<ul>
+		<li>Battery Failure</li>
+		<li>Battery below minimum capacity(Most common)</li>
+		<li>The cache size memory of the controllers are different</li>
+		<li>Cache Reconfiguration </li>
+		<li>A Cache Data-Restore operation is in progress, which interrupted the normal write-back caching process</li>
+		<li>The space in the cache backup device is insufficient for storing the cache</li>
+		<li>Memory parity error</li>
+		<li>Simplex configuration - cache cannot be mirrored</li>
+	</ul>
+
+</body>
+</html>
+
+
